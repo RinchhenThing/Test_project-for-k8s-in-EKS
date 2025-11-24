@@ -112,7 +112,7 @@ Deployments, Services, and Ingress
 
 Path-based routing (/ → frontend, /api → backend)
 
-Rolling updates via kubectl rollout restart
+Rolling updates via kubectl rollout restarts
 
 Notes
 This setup is for local development only (Minikube).
