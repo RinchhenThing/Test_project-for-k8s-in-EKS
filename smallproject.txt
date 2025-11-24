@@ -1,0 +1,24 @@
+lets make a small project,
+first lets create a small frontend backend project in html css and js
+Then, make k8s directory and test the kubernetes deployment in local environment, 
+Then enable eks, make a cluster, node and test the k8s deployment in aws 
+step wise
+
+Project Structure:
+
+smallproject/
+├─ frontend/
+│  ├─ index.html
+│  ├─ styles.css
+│  └─ app.js
+├─ backend/
+│  ├─ package.json
+│  ├─ index.js
+│  └─ Dockerfile
+├─ k8s/
+│  ├─ frontend-deployment.yaml
+│  ├─ backend-deployment.yaml
+│  └─ backend-service.yaml
+└─ README.md
+
+Step 1: Create the plain HTML, CSS and JS project
