@@ -10,3 +10,7 @@ app.get('/api/hello', (req, res) => {
 app.use('/', express.static('/usr/share/nginx/html'));
 
 app.listen(port, () => console.log(`backend listening on ${port}`));
+
+app.get("/hello", (req, res) => {
+  res.send(`Hello from backend! POD: ${process.env.HOSTNAME}`);
+});

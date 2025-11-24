@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   name: demo-backend
 spec:
-  replicas: 2
+  replicas: 3
   selector:
-    matchLables:
+    matchLabels:
       app: demo-backend
   template:
     metadata:
@@ -15,21 +15,21 @@ spec:
       containers:
       - name: backend
         image: test-backend:latest
+        imagePullPolicy: Never
         ports:
-        - containersPort: 3000
+        - containerPort: 3000
         env:
         - name: HOSTNAME
           valueFrom:
-            filedRef:
-              filedPath: metadata.name
-
+            fieldRef:
+              fieldPath: metadata.name
 ---
-#backend service
 apiVersion: v1
+kind: Service
 metadata:
   name: demo-backend
-spec: 
-  selector: 
+spec:
+  selector:
     app: demo-backend
   ports:
     - port: 80

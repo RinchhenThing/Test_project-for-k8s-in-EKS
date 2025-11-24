@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: YOUR_FRONTEND_IMAGE # replace with local tag or ECR URI
+        image: test-frontend:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 80
-
 ---
 apiVersion: v1
 kind: Service
